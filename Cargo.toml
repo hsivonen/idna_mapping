@@ -1,0 +1,10 @@
+[package]
+name = "idna_mapping"
+version = "0.0.0"
+edition = "2021"
+license = "Apache-2.0 OR MIT"
+authors = ["Henri Sivonen <hsivonen@hsivonen.fi>"]
+readme = "README.md"
+description = "UTS 46 mapping for unicode-rs back end of idna"
+
+[dependencies]
