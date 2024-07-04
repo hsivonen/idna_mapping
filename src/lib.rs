@@ -36,11 +36,7 @@ enum Mapping {
     Valid,
     Ignored,
     Mapped(StringTableSlice),
-    Deviation(StringTableSlice),
     Disallowed,
-    DisallowedStd3Valid,
-    DisallowedStd3Mapped(StringTableSlice),
-    DisallowedIdna2008,
 }
 
 fn find_char(codepoint: char) -> &'static Mapping {
@@ -107,10 +103,7 @@ where
             }
 
             return Some(match *find_char(codepoint) {
-                Mapping::Valid
-                | Mapping::Deviation(_)
-                | Mapping::DisallowedStd3Valid
-                | Mapping::DisallowedIdna2008 => codepoint,
+                Mapping::Valid => codepoint,
                 Mapping::Ignored => {
                     if self.ignored_as_errors {
                         '\u{FFFD}'
@@ -118,7 +111,7 @@ where
                         continue;
                     }
                 }
-                Mapping::Mapped(ref slice) | Mapping::DisallowedStd3Mapped(ref slice) => {
+                Mapping::Mapped(ref slice) => {
                     self.slice = Some(decode_slice(slice).chars());
                     continue;
                 }
