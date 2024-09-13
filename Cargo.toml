@@ -1,11 +1,20 @@
 [package]
 name = "idna_mapping"
-version = "0.0.0"
+version = "0.0.0" # Change to 1.0.0 before publishing to crates.io
+rust-version = "1.57" # Match the idna crate
 edition = "2021"
 license = "(Apache-2.0 OR MIT) AND Unicode-3.0"
 authors = ["The rust-url developers"]
 readme = "README.md"
 description = "UTS 46 mapping for unicode-rs back end of idna"
+categories = ["no-std", "internationalization"]
+keywords = ["unicode", "dns", "idna"]
+documentation = "https://docs.rs/idna_mapping/latest/idna_mapping/"
+homepage = "https://docs.rs/crate/idna_mapping/latest" # README link
+repository = "https://github.com/hsivonen/idna_mapping" # Change to servo if accepted
 
 [dependencies]
 unicode-joining-type = "0.7.0"
+
+[dev-dependencies]
+assert_matches = "1.3"

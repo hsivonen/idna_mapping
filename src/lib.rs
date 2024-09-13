@@ -6,8 +6,16 @@
 // option. This file may not be copied, modified, or distributed
 // except according to those terms.
 
-//! [*Unicode IDNA Compatibility Processing*
-//! (Unicode Technical Standard #46)](http://www.unicode.org/reports/tr46/)
+//! This crate is not meant to be used directly. It part of the unicode-rs back end
+//! for the `idna` crate providing the UTS 46 mapping data and an abstraction over
+//! JoiningType data (delegated to `unicode-joining-type`).
+//!
+//! See the [README of the latest version of the `idna_adapter` crate][1] for
+//! how to use.
+//!
+//! [1]: https://docs.rs/crate/idna_adapter/latest
+
+#![no_std]
 
 use self::Mapping::*;
 
@@ -183,6 +191,7 @@ pub fn joining_type(c: char) -> JoiningType {
 #[cfg(test)]
 mod tests {
     use super::{find_char, Mapping};
+    use assert_matches::assert_matches;
 
     #[test]
     fn mapping_fast_path() {
