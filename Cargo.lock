@@ -6,11 +6,11 @@ version = 3
 name = "idna_mapping"
 version = "0.0.0"
 dependencies = [
- "unicode-general-category",
+ "unicode-joining-type",
 ]
 
 [[package]]
-name = "unicode-general-category"
-version = "0.6.0"
+name = "unicode-joining-type"
+version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2281c8c1d221438e373249e065ca4989c4c36952c211ff21a0ee91c44a3869e7"
+checksum = "22f8cb47ccb8bc750808755af3071da4a10dcd147b68fc874b7ae4b12543f6f5"

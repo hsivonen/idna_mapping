@@ -8,3 +8,4 @@ readme = "README.md"
 description = "UTS 46 mapping for unicode-rs back end of idna"
 
 [dependencies]
+unicode-joining-type = "0.7.0"
