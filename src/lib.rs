@@ -15,6 +15,10 @@
 //!
 //! [1]: https://docs.rs/crate/idna_adapter/latest
 
+// The code in this file has been moved from the `rust-url` repo.
+// See https://github.com/servo/rust-url/blob/c04aca3f74eb567ec4853362ef28b7ce2f19c5d3/idna/src/uts46.rs
+// for older history.
+
 #![no_std]
 
 use self::Mapping::*;

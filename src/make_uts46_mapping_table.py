@@ -10,6 +10,10 @@
 # You can get the latest idna table from
 # http://www.unicode.org/Public/idna/latest/IdnaMappingTable.txt
 
+# The code in this file has been moved from the `rust-url` repo.
+# See https://github.com/servo/rust-url/blob/c04aca3f74eb567ec4853362ef28b7ce2f19c5d3/idna/src/make_uts46_mapping_table.py
+# for older history.
+
 import collections
 import itertools
 
