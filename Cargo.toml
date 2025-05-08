@@ -1,6 +1,6 @@
 [package]
 name = "idna_mapping"
-version = "1.0.0"
+version = "1.1.0"
 rust-version = "1.57" # Match the idna crate
 edition = "2021"
 license = "(Apache-2.0 OR MIT) AND Unicode-3.0"
@@ -14,7 +14,7 @@ homepage = "https://docs.rs/crate/idna_mapping/latest" # README link
 repository = "https://github.com/hsivonen/idna_mapping"
 
 [dependencies]
-unicode-joining-type = "0.7.0"
+unicode-joining-type = "1"
 
 [dev-dependencies]
 assert_matches = "1.3"
